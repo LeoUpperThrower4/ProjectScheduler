@@ -1,0 +1,2 @@
+﻿*adicionar a função de remover arquivos já salvos
+*adicionar a função de editar arquivos
