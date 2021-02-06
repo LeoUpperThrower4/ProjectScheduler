@@ -24,7 +24,7 @@ class Program
                 mp = Helper.OpenFile(AskID());
 
                 // if the file was not found, end the program...
-                if (!(mp.ID == "404"))
+                if (mp.ID != "404")
                 {
                     // otherwise, show each project saved on the MainProject
                     for (int i = 0; i < mp.ProjectList.Count; i++)
