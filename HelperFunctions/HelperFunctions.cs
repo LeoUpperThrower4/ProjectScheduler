@@ -8,7 +8,7 @@ namespace HelperFunctions
     public static class Helper
     {
         /// <summary>
-        /// Opens the .dat file given the ID
+        /// Opens the file 'ID'.dat
         /// </summary>
         /// <param name="id">ID of the .dat file</param>
         /// <returns>MainProject that was serialized by the SaveFile method if ID was correctly passed. Otherwise, return an empty MainProject class</returns>
