@@ -25,7 +25,6 @@ namespace PSObjects
         /// <param name="date">Limit Date</param>
         /// <param name="materia">Materia</param>
         /// <param name="description">Project description</param>
-        /// <param name="ID">Unique ID of yout main project</param>
         public void CreateProject(string name, DateTimeOffset date, string materia, string description)
         {
             var proj = new Project(name, date, materia, description);
@@ -37,7 +36,8 @@ namespace PSObjects
         /// </summary>
         public MainProject(SerializationInfo info, StreamingContext context)
         {
-            ProjectList = (List<Project>)info.GetValue("ProjectsList", typeof(List<Project>));
+            this.ProjectList = (List<Project>)info.GetValue("ProjectsList", typeof(List<Project>));
+            this.ID = (string)info.GetValue("ID", typeof(string));
         }
 
         /// <summary>
@@ -46,6 +46,7 @@ namespace PSObjects
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.AddValue("ProjectsList", ProjectList);
+            info.AddValue("ID", ID);
         }
     }
 
